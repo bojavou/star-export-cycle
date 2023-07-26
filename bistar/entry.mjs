@@ -1,3 +1,3 @@
 import { value } from './left.mjs'
-globalThis.print ??= console.log
-print(value)
+const log = globalThis.console?.log ?? globalThis.print
+log(value)
